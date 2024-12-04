@@ -1,1 +1,20 @@
-header.header
+include ./../../../views/helpers/mixins
+
+- var phone = '+7 (998) 000 - 00 - 00'
+
+header.app-header.animate__animated
+    div.container.fill-height
+        div.app-header__wrap
+            a.app-header__logo(href='/')
+                +img('logo-dark.svg')
+
+            include ../../../blocks/modules/navigation/navigation
+
+            div.app-header__actions
+                a.app-header__call(href='tel:' + phone)
+                    +svg('calling')
+                    span #{phone}
+            div.app-header__nav-toggle
+                button#toggleMenu.button-icon.-accent
+                    +svg('menu').s-32.open-menu
+                    +svg('close').s-32.close-menu

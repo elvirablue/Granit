@@ -1,0 +1,117 @@
+.main {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: rem(788);
+  padding-top: rem(96);
+  background-image: url("/img/bg-fs.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &__text, &__title {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__text {
+    max-width: rem(480);
+    margin-left: auto;
+
+    *:first-child {
+      display: block;
+      font-size: rem(24);
+      font-weight: 600;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: rem(20);
+  }
+
+  &__decor {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: rem(520);
+    border-radius: rem(234) rem(234) 0 0;
+    overflow: hidden;
+
+    img {
+      object-position: top center;
+      object-fit: cover;
+    }
+  }
+
+  &__actions {
+    z-index: 2;
+    display: block;
+    margin-top: rem(52);
+    margin-bottom: rem(-140);
+  }
+
+  .h4 {
+    text-transform: none;
+  }
+
+  @include media_breakpoint(tablet) {
+    &__text {
+      max-width: none;
+    }
+
+    &__decor {
+      border-radius: 20vw 20vw 0 0;
+    }
+  }
+
+  @include media_breakpoint(mobile) {
+    padding-top: rem(8);
+
+    .row {
+      position: relative;
+      z-index: 2;
+    }
+
+    &__text, &__title {
+      padding-top: rem(92);
+      text-align: center;
+    }
+
+    &__text {
+      *:first-child {
+        font-size: rem(18);
+      }
+    }
+
+    &__subtitle {
+      font-size: rem(16);
+    }
+
+    &__actions {
+      padding: rem(86) 0 rem(20);
+      margin: 0 auto;
+    }
+
+    &__decor {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 0;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--main-color);
+        opacity: 0.72;
+      }
+    }
+  }
+}

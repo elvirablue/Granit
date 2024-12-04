@@ -2,12 +2,102 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = 'ГРАНИТ: Аренда спецтехники'
 
 block content
-	include ../blocks/modules/header/header
-		h1 INDEX 3333
-	include ../blocks/modules/footer/footer
+	section.main
+		div.container
+			div.row
+				div.col-6.col-sm-12
+					div.main__title
+						h1.h1 РАБОТЫ НУЛЕВОГО ЦИКЛА СТРОИТЕЛЬСТВА
+						div.main__subtitle.text-semi-bold Комплекс шпунтовых и свайных работ по всей России “Под&nbsp;ключ”
+
+				div.col-6.col-sm-12
+					div.main__text
+						div.gray-light-color Сэкономим до 40%
+						div.gray-light-color на материале и работах без потери качества и надежности
+						div За счёт использования новейших видов шпунта, собственного парка техники и бесплатного аудита проекта.
+			div.main__actions
+				+button-circle
+			div.main__decor
+				+img('fs.png')
+
+	section.about
+		div.container
+			+section-title('О компании')
+			div.row
+				div.col-6.col-sm-12
+					div.h2 Основу компании
+					div.about__text
+						div.text-contents
+							p составляют инженеры с опытом более 10 лет в строительстве и шпунтовых работах.
+							p Строгий контроль каждого этапа работ и поставок с использованием современных технологий позволяет избегать проблем с доставкой материалов и качеством производимых работ.
+							p Основу компании составляют инженеры с опытом более 10 лет в строительстве и шпунтовых работах.
+							p Строгий контроль каждого этапа работ и поставок с использованием современных технологий позволяет избегать проблем с доставкой материалов и качеством производимых работ.Основу компании составляют инженеры с опытом более 10 лет в строительстве и шпунтовых работах.
+							p Строгий контроль каждого этапа работ и поставок с использованием современных технологий позволяет избегать проблем с доставкой материалов и качеством производимых работ.
+				div.col-6.col-sm-12
+					div.about__decor
+						div.image-radius.-top-right.-bottom-left
+							+img('about.png')
+
+
+	section.certificates
+		div.container
+			+section-title('сертификаты')
+			include ../blocks/modules/certificates-slider/certificates-slider
+
+	section.services
+		div.container
+			+section-title('услуги')
+			include ../blocks/modules/services-accordion/services-accordion
+
+	section.calculation
+		div.container
+			+section-title('расчет стоимости')
+			div.row
+				div.col-7.col-md-6.col-sm-12
+					div.calculation__text
+						div.h2 РАССЧИТАЕМ СТОИМОСТЬ шпунтового ограждения
+						div.pt-8 Оставьте заявку и мы свяжемся с вами в ближайшее время
+						div.pt-16.text-semi-bold.gray-light-color Пришлите ваш проект и получите расчет
+						div.pt-8 Расчитаем за 2 часа
+
+						div.calculation__decor
+							+img('calculation.png')
+				div.col-5.col-md-6.col-sm-12
+					div.calculation__form
+						include ../blocks/components/forms/calculation-form
+
+	section.statistics
+		div.container
+			div.row
+				div.col-4.col-xs-6
+					div.statistics__item
+						span.statistics__number 138
+						span.statistics__name выполненных работ
+				div.col-4.col-xs-6
+					div.statistics__item
+						span.statistics__number 110 000 т.
+						span.statistics__name шпунта поставленно
+				div.col-4.col-xs-12
+					div.statistics__item
+						span.statistics__number 100+
+						span.statistics__name отгруженных машин
+
+	section.feedback
+		div.container
+			+section-title('Вопросы')
+			div.row
+				div.col-7.col-md-6.col-sm-12
+					div.feedback__text
+						div.h2 ОСТАЛИСЬ ВОПРОСЫ?
+						div.pt-8 Или нужна консультация?
+						div.pt-8 Заполните форму или позвоните нам
+				div.col-5.col-md-6.col-sm-12
+					div.calculation__form
+						include ../blocks/components/forms/feedback-form
+
 
 block scripts
 	script(src="js/vendor.js")

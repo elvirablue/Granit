@@ -1,0 +1,81 @@
+.h1 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: rem(40);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--gray-light-color);
+
+  @include media_breakpoint(tablet) {
+    font-size: rem(32);
+  }
+  @include media_breakpoint(mobile) {
+    font-size: rem(24);
+  }
+}
+
+.h2 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: rem(32);
+  font-weight: 500;
+  text-transform: uppercase      ;
+  color: var(--gray-light-color);
+
+  @include media_breakpoint(tablet) {
+    font-size: rem(28);
+  }
+  @include media_breakpoint(mobile) {
+    font-size: rem(20);
+  }
+}
+
+.h3 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: rem(20);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--gray-light-color);
+
+  @include media_breakpoint(tablet) {
+    font-size: rem(18);
+  }
+  @include media_breakpoint(mobile) {
+    font-size: rem(16);
+  }
+}
+
+.h5 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: rem(20);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--gray-light-color);
+
+  @include media_breakpoint(tablet) {
+
+  }
+  @include media_breakpoint(mobile) {
+    font-size: rem(18);
+  }
+}
+
+@for $i from 4 through 8 {
+  .text-#{$i * 4} {
+    font-size: #{$i * 0.25}rem;
+  }
+}
+
+.text-semi-bold {
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: 600;
+}

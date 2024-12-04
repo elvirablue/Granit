@@ -1,0 +1,54 @@
+include ./../../../views/helpers/mixins
+
+-
+    services = [
+        {
+            title: 'Проектирование',
+            img: 'services/1.png',
+            text: [
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vel!',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur incidunt, maxime perferendis quos voluptates? A architecto facere ipsum laboriosam.',
+            ]
+        },
+        {
+            title: 'Подготовка ППР (Проекта производства работ)',
+            img: 'services/2.jpg',
+            text: [
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vel!',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur incidunt, maxime perferendis quos voluptates? A architecto facere ipsum laboriosam.',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur incidunt, maxime perferendis quos voluptates? A architecto facere ipsum laboriosam.',
+            ]
+        },
+        {
+            title: 'Погружение шпунта Ларсена методом Статического вдавливания',
+            img: 'services/3.jpg',
+            text: [
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vel!',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur incidunt, maxime perferendis quos voluptates? A architecto facere ipsum laboriosam.',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad adipisci, aliquid amet autem beatae consectetur culpa dolorem eaque inventore ipsam nam perferendis perspiciatis placeat qui quidem quisquam ratione reiciendis velit veniam. Id officia porro praesentium quia saepe vel velit.',
+            ]
+        },
+    ]
+
+div.accordion
+    each item in services
+        div.__item
+            button.__activator
+                +svg('accordion-arrow').s-24
+                div.__title
+                    span #{item.title}
+            div.__content
+                div.__content-inner
+                    div.row
+                        div.col-5.col-xs-none
+                            div.image-radius.image-radius--top-right
+                                +img(item.img)
+                        div.col-7.col-xs-12
+                            div.services__content
+                                div.text-contents
+                                    div.h2 #{item.title}
+                                    each unit in item.text
+                                        p #{unit}
+                                button.button.-radius-right.-accent
+                                    span Узнать цену
+                                    +svg('arrow-right').s-24

@@ -1,0 +1,16 @@
+include ./../../../views/helpers/mixins
+
+footer.app-footer
+    div.container
+        div.app-footer__wrap
+            div.app-footer__info
+                a.button-text(href="#") Политика конфиденциальности
+                div ООО "СК Гранит"
+                div ИНН 5257207221
+                div Copyright 2022 г.
+
+            div.app-footer__logo
+                +img('logo-light.svg')
+
+            div.app-footer__social
+                +socials()

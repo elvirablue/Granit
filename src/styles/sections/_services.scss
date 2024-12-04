@@ -1,0 +1,37 @@
+.services {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .text-contents {
+      max-height: calc(var(--item-height-desktop) - var(--activator-size) - rem(48));
+      overflow-y: auto;
+    }
+
+    .button {
+      margin: auto 0 0 auto;
+    }
+
+    @include media_breakpoint(mobile) {
+      .text-contents {
+        max-height: calc(var(--item-height-mobile) - var(--activator-size) - rem(112));
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    @include media_breakpoint(small-mobile) {
+      .text-contents {
+        max-height: calc(80vw - var(--activator-size) - rem(100));
+      }
+
+      .button {
+        margin: rem(16) auto 0 0;
+      }
+    }
+  }
+}

@@ -3,22 +3,473 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>gulp-pug-starter</title>
+    <title>ГРАНИТ: Аренда спецтехники</title>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-<link rel="manifest" href="img/favicons/site.webmanifest">
-<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="img/favicons/favicon.svg">
 <link rel="shortcut icon" href="img/favicons/favicon.ico">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head>
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+<link rel="manifest" href="img/favicons/site.webmanifest"></head>
   <body>
-    <header class="header"></header>
-    <h1>INDEX 3333</h1>
+    <div class="app">
+      <header class="app-header animate__animated">
+        <div class="container fill-height">
+          <div class="app-header__wrap"><a class="app-header__logo" href="/"><img src="./img/logo-dark.svg"></a>
+            <nav class="navigation" id="Menu"><a class="navigation__logo" href="/"><img src="./img/logo-dark.svg"></a><a class="navigation__link" href="/services.html"><span>Услуги</span></a><a class="navigation__link" href="/catalog.html"><span>Каталог</span></a><a class="navigation__link" href="/technique.html"><span>Спец.техника</span></a><a class="navigation__link" href="/technique.html"><span>Наши работы</span></a><a class="navigation__link" href="/about.html"><span>О компании</span></a><a class="navigation__link" href="/contacts.html"><span>Контакты</span></a>
+              <div class="navigation__social">
+                            <button class="button-icon button-icon--accent">
+                                          <svg class="s-36">
+                                            <use href="./img/sprites/sprite.svg#mail"/>
+                                          </svg>
+                            </button>
+                            <button class="button-icon button-icon--accent">
+                                          <svg class="s-36">
+                                            <use href="./img/sprites/sprite.svg#whatsapp"/>
+                                          </svg>
+                            </button>
+                            <button class="button-icon button-icon--accent">
+                                          <svg class="s-36">
+                                            <use href="./img/sprites/sprite.svg#telegram"/>
+                                          </svg>
+                            </button>
+              </div>
+            </nav>
+            <div class="app-header__actions"><a class="app-header__call" href="tel:+7 (998) 000 - 00 - 00">
+                            <svg>
+                              <use href="./img/sprites/sprite.svg#calling"/>
+                            </svg><span>+7 (998) 000 - 00 - 00</span></a></div>
+            <div class="app-header__nav-toggle">
+              <button class="button-icon button-icon--accent" id="toggleMenu">
+                            <svg class="s-32 open-menu">
+                              <use href="./img/sprites/sprite.svg#menu"/>
+                            </svg>
+                            <svg class="s-32 close-menu">
+                              <use href="./img/sprites/sprite.svg#close"/>
+                            </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="app-main">
+        <section class="main">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-12">
+                <div class="main__title">
+                  <h1 class="h1">РАБОТЫ НУЛЕВОГО ЦИКЛА СТРОИТЕЛЬСТВА</h1>
+                  <div class="main__subtitle text-semi-bold">Комплекс шпунтовых и свайных работ по всей России “Под&nbsp;ключ”</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-12">
+                <div class="main__text">
+                  <div class="gray-light-color">Сэкономим до 40%</div>
+                  <div class="gray-light-color">на материале и работах без потери качества и надежности</div>
+                  <div>За счёт использования новейших видов шпунта, собственного парка техники и бесплатного аудита проекта.</div>
+                </div>
+              </div>
+            </div>
+            <div class="main__actions">
+                          <button class="button-circle">
+                                        <svg class="button-circle__text">
+                                          <use href="./img/sprites/sprite.svg#button-call"/>
+                                        </svg>
+                                        <svg class="button-circle__icon animate__animated animate__heartBeat animate__infinite animate__slow">
+                                          <use href="./img/sprites/sprite.svg#calling-thin"/>
+                                        </svg>
+                          </button>
+            </div>
+            <div class="main__decor"><img src="./img/fs.png">
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container">
+                        <div class="section-title">
+                          <div class="section-title__literal h2"><span>О</span></div>
+                          <div class="section-title__title"><span class="h3">О компании</span></div>
+                        </div>
+            <div class="row">
+              <div class="col-6 col-sm-12">
+                <div class="h2">Основу компании</div>
+                <div class="about__text">
+                  <div class="text-contents">
+                    <p>составляют инженеры с опытом более 10 лет в строительстве и шпунтовых работах.</p>
+                    <p>Строгий контроль каждого этапа работ и поставок с использованием современных технологий позволяет избегать проблем с доставкой материалов и качеством производимых работ.</p>
+                    <p>Основу компании составляют инженеры с опытом более 10 лет в строительстве и шпунтовых работах.</p>
+                    <p>Строгий контроль каждого этапа работ и поставок с использованием современных технологий позволяет избегать проблем с доставкой материалов и качеством производимых работ.Основу компании составляют инженеры с опытом более 10 лет в строительстве и шпунтовых работах.</p>
+                    <p>Строгий контроль каждого этапа работ и поставок с использованием современных технологий позволяет избегать проблем с доставкой материалов и качеством производимых работ.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-12">
+                <div class="about__decor">
+                  <div class="image-radius image-radius--top-right image-radius--bottom-left"><img src="./img/about.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="certificates">
+          <div class="container">
+                        <div class="section-title">
+                          <div class="section-title__literal h2"><span>С</span></div>
+                          <div class="section-title__title"><span class="h3">сертификаты</span></div>
+                        </div>
+            <div class="certificates__slider" id="certificatesCarousel">
+              <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides" id="certificatesViewer">
+                    <li class="glide__slide">
+                      <figure class="certificate-slide"><img src="./img/certificates/1.png">
+                        <figcaption>
+                          <div class="certificate-slide__title">1 Сертификат соответствия системе качества ISO 9001</div>
+                          <div class="certificate-slide__description">Применительно к выполнению работ с проектной док., инженерными изысканиями, строительству и тр</div>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li class="glide__slide">
+                      <figure class="certificate-slide"><img src="./img/certificates/1.png">
+                        <figcaption>
+                          <div class="certificate-slide__title">2 Сертификат соответствия системе качества ISO 9001</div>
+                          <div class="certificate-slide__description">Применительно к выполнению работ с проектной док., инженерными изысканиями, строительству и тр</div>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li class="glide__slide">
+                      <figure class="certificate-slide"><img src="./img/certificates/1.png">
+                        <figcaption>
+                          <div class="certificate-slide__title">3 Сертификат соответствия системе качества ISO 9001</div>
+                          <div class="certificate-slide__description">Применительно к выполнению работ с проектной док., инженерными изысканиями, строительству и тр</div>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li class="glide__slide">
+                      <figure class="certificate-slide"><img src="./img/certificates/1.png">
+                        <figcaption>
+                          <div class="certificate-slide__title">4 Сертификат соответствия системе качества ISO 9001</div>
+                          <div class="certificate-slide__description">Применительно к выполнению работ с проектной док., инженерными изысканиями, строительству и тр</div>
+                        </figcaption>
+                      </figure>
+                    </li>
+                  </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                  <div class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+                    <button class="slider__button--prev">
+                                  <svg class="s-48">
+                                    <use href="./img/sprites/sprite.svg#slider-arrow"/>
+                                  </svg>
+                    </button>
+                  </div>
+                  <div class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
+                    <button class="slider__button--next">
+                                  <svg class="s-48">
+                                    <use href="./img/sprites/sprite.svg#slider-arrow"/>
+                                  </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                  <button class="glide__bullet" data-glide-dir="=0"></button>
+                  <button class="glide__bullet" data-glide-dir="=1"></button>
+                  <button class="glide__bullet" data-glide-dir="=2"></button>
+                  <button class="glide__bullet" data-glide-dir="=3"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="container">
+                        <div class="section-title">
+                          <div class="section-title__literal h2"><span>У</span></div>
+                          <div class="section-title__title"><span class="h3">услуги</span></div>
+                        </div>
+            <div class="accordion">
+              <div class="accordion__item">
+                <button class="accordion__activator">
+                              <svg class="s-24">
+                                <use href="./img/sprites/sprite.svg#accordion-arrow"/>
+                              </svg>
+                  <div class="accordion__title"><span>Проектирование</span></div>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__content-inner">
+                    <div class="row">
+                      <div class="col-5 col-xs-none">
+                        <div class="image-radius image-radius--top-right"><img src="./img/services/1.png">
+                        </div>
+                      </div>
+                      <div class="col-7 col-xs-12">
+                        <div class="services__content">
+                          <div class="text-contents">
+                            <div class="h2">Проектирование</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vel!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur incidunt, maxime perferendis quos voluptates? A architecto facere ipsum laboriosam.</p>
+                          </div>
+                          <button class="button button--radius-right button--accent"><span>Узнать цену</span>
+                                        <svg class="s-24">
+                                          <use href="./img/sprites/sprite.svg#arrow-right"/>
+                                        </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <button class="accordion__activator">
+                              <svg class="s-24">
+                                <use href="./img/sprites/sprite.svg#accordion-arrow"/>
+                              </svg>
+                  <div class="accordion__title"><span>Подготовка ППР (Проекта производства работ)</span></div>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__content-inner">
+                    <div class="row">
+                      <div class="col-5 col-xs-none">
+                        <div class="image-radius image-radius--top-right"><img src="./img/services/2.jpg">
+                        </div>
+                      </div>
+                      <div class="col-7 col-xs-12">
+                        <div class="services__content">
+                          <div class="text-contents">
+                            <div class="h2">Подготовка ППР (Проекта производства работ)</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vel!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur incidunt, maxime perferendis quos voluptates? A architecto facere ipsum laboriosam.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur incidunt, maxime perferendis quos voluptates? A architecto facere ipsum laboriosam.</p>
+                          </div>
+                          <button class="button button--radius-right button--accent"><span>Узнать цену</span>
+                                        <svg class="s-24">
+                                          <use href="./img/sprites/sprite.svg#arrow-right"/>
+                                        </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <button class="accordion__activator">
+                              <svg class="s-24">
+                                <use href="./img/sprites/sprite.svg#accordion-arrow"/>
+                              </svg>
+                  <div class="accordion__title"><span>Погружение шпунта Ларсена методом Статического вдавливания</span></div>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__content-inner">
+                    <div class="row">
+                      <div class="col-5 col-xs-none">
+                        <div class="image-radius image-radius--top-right"><img src="./img/services/3.jpg">
+                        </div>
+                      </div>
+                      <div class="col-7 col-xs-12">
+                        <div class="services__content">
+                          <div class="text-contents">
+                            <div class="h2">Погружение шпунта Ларсена методом Статического вдавливания</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vel!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur incidunt, maxime perferendis quos voluptates? A architecto facere ipsum laboriosam.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad adipisci, aliquid amet autem beatae consectetur culpa dolorem eaque inventore ipsam nam perferendis perspiciatis placeat qui quidem quisquam ratione reiciendis velit veniam. Id officia porro praesentium quia saepe vel velit.</p>
+                          </div>
+                          <button class="button button--radius-right button--accent"><span>Узнать цену</span>
+                                        <svg class="s-24">
+                                          <use href="./img/sprites/sprite.svg#arrow-right"/>
+                                        </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="calculation">
+          <div class="container">
+                        <div class="section-title">
+                          <div class="section-title__literal h2"><span>Р</span></div>
+                          <div class="section-title__title"><span class="h3">расчет стоимости</span></div>
+                        </div>
+            <div class="row">
+              <div class="col-7 col-md-6 col-sm-12">
+                <div class="calculation__text">
+                  <div class="h2">РАССЧИТАЕМ СТОИМОСТЬ шпунтового ограждения</div>
+                  <div class="pt-8">Оставьте заявку и мы свяжемся с вами в ближайшее время</div>
+                  <div class="pt-16 text-semi-bold gray-light-color">Пришлите ваш проект и получите расчет</div>
+                  <div class="pt-8">Расчитаем за 2 часа</div>
+                  <div class="calculation__decor"><img src="./img/calculation.png">
+                  </div>
+                </div>
+              </div>
+              <div class="col-5 col-md-6 col-sm-12">
+                <div class="calculation__form">
+                  <form class="form" role="form" method="GET">
+                    <div class="form__title">
+                      <div class="h3">Заполните форму</div>
+                    </div>
+                    <div class="form__fields">
+                      <div class="form__fields-item">
+                                          <div class="input">
+                                            <input value placeholder="Марка" name="mark" type="text" required min max>
+                                          </div>
+                        <div class="error">Example error text</div>
+                      </div>
+                      <div class="form__fields-item">
+                                          <div class="input">
+                                            <input value placeholder="кол-во" name="amount" type="number" required min max>
+                                          </div>
+                        <div class="error">Example error text</div>
+                      </div>
+                      <div class="form__fields-item">
+                                          <div class="input">
+                                            <input value placeholder="имя" name="name" type="text" required min max>
+                                          </div>
+                        <div class="error">Example error text</div>
+                      </div>
+                      <div class="form__fields-item">
+                                          <div class="input">
+                                            <input value placeholder="Номер телефона" name="phone" type="tel" required min max>
+                                          </div>
+                        <div class="error">Example error text</div>
+                      </div>
+                      <div class="form__fields-item">
+                                          <div class="input  input--textarea">
+                                            <textarea value placeholder="комментарии" name="phone"></textarea>
+                                          </div>
+                        <div class="error">Example error text</div>
+                      </div>
+                    </div>
+                    <div class="form__actions">
+                                        <div class="checkbox">
+                                          <input type="checkbox" name="agreement" id="checkbox-agreement">
+                                          <label for="checkbox-agreement"><span class="check"></span><span>Я согласен(а) на обработку персональных данных</span></label>
+                                        </div>
+                      <button class="button button--radius button--accent full-width" type="submit"><span>Отправить заявку</span>
+                                          <svg class="s-24">
+                                            <use href="./img/sprites/sprite.svg#upload"/>
+                                          </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="statistics">
+          <div class="container">
+            <div class="row">
+              <div class="col-4 col-xs-6">
+                <div class="statistics__item"><span class="statistics__number">138</span><span class="statistics__name">выполненных работ</span></div>
+              </div>
+              <div class="col-4 col-xs-6">
+                <div class="statistics__item"><span class="statistics__number">110 000 т.</span><span class="statistics__name">шпунта поставленно</span></div>
+              </div>
+              <div class="col-4 col-xs-12">
+                <div class="statistics__item"><span class="statistics__number">100+</span><span class="statistics__name">отгруженных машин</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="feedback">
+          <div class="container">
+                              <div class="section-title">
+                                <div class="section-title__literal h2"><span>В</span></div>
+                                <div class="section-title__title"><span class="h3">Вопросы</span></div>
+                              </div>
+            <div class="row">
+              <div class="col-7 col-md-6 col-sm-12">
+                <div class="feedback__text">
+                  <div class="h2">ОСТАЛИСЬ ВОПРОСЫ?</div>
+                  <div class="pt-8">Или нужна консультация?</div>
+                  <div class="pt-8">Заполните форму или позвоните нам</div>
+                </div>
+              </div>
+              <div class="col-5 col-md-6 col-sm-12">
+                <div class="calculation__form">
+                  <form class="form" role="form" method="GET">
+                    <div class="form__title">
+                      <div class="h3">Заполните форму</div>
+                    </div>
+                    <div class="form__fields">
+                      <div class="form__fields-item">
+                                          <div class="input">
+                                            <input value placeholder="имя" name="name" type="text" required min max>
+                                          </div>
+                        <div class="error">Example error text</div>
+                      </div>
+                      <div class="form__fields-item">
+                                          <div class="input">
+                                            <input value placeholder="Номер телефона" name="phone" type="tel" required min max>
+                                          </div>
+                        <div class="error">Example error text</div>
+                      </div>
+                      <div class="form__fields-item">
+                                          <div class="input  input--textarea">
+                                            <textarea value placeholder="комментарии" name="phone"></textarea>
+                                          </div>
+                        <div class="error">Example error text</div>
+                      </div>
+                    </div>
+                    <div class="form__actions">
+                                        <div class="checkbox">
+                                          <input type="checkbox" name="agreement" id="checkbox-agreement">
+                                          <label for="checkbox-agreement"><span class="check"></span><span>Я согласен(а) на обработку персональных данных</span></label>
+                                        </div>
+                      <button class="button button--radius button--accent full-width" type="submit"><span>Отправить заявку</span>
+                                          <svg class="s-24">
+                                            <use href="./img/sprites/sprite.svg#upload"/>
+                                          </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="app-footer">
+        <div class="container">
+          <div class="app-footer__wrap">
+            <div class="app-footer__info"><a class="button-text" href="#">Политика конфиденциальности</a>
+              <div>ООО "СК Гранит"</div>
+              <div>ИНН 5257207221</div>
+              <div>Copyright 2022 г.</div>
+            </div>
+            <div class="app-footer__logo"><img src="./img/logo-light.svg">
+            </div>
+            <div class="app-footer__social">
+                    <button class="button-icon">
+                            <svg class="s-36">
+                              <use href="./img/sprites/sprite.svg#mail"/>
+                            </svg>
+                    </button>
+                    <button class="button-icon">
+                            <svg class="s-36">
+                              <use href="./img/sprites/sprite.svg#whatsapp"/>
+                            </svg>
+                    </button>
+                    <button class="button-icon">
+                            <svg class="s-36">
+                              <use href="./img/sprites/sprite.svg#telegram"/>
+                            </svg>
+                    </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>

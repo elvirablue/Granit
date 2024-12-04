@@ -1,0 +1,24 @@
+
+:root {
+  --header-bg-color: #FFFFFF;
+  --accent-color: #DF9130;
+  --main-color: #1A1E23;
+  --secondary-color: #494949;
+  --gray-color: #333940;
+  --gray-light-color: #E0E0E0;
+  --gray-lighter-color: #EFEFEF;
+  --error-color: #E30613;
+
+  --text-color: rgba(224, 224, 224, 0.5);
+  --gray-light-color-opacity: rgba(224, 224, 224, 0.15);
+
+  //--action-height: rem(58);
+  //--action-large-height: 80px;
+  //--action-small-height: 32px;
+}
+
+$scroll-custom-size: rem(4);
+$scroll-thumb-bg: var(--gray-light-color);
+$scroll-thumb-hover-bg: var(--main-color);
+$scroll-track-bg: var(--gray-color);
+$scroll-thumb-border: 0px solid var(--gray-color);

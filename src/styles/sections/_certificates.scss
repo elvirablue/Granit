@@ -1,0 +1,50 @@
+@import "./../overriding/glide";
+@import "./../overriding/viewer";
+
+.certificates {
+  --slide-certificate-width: 17.875rem;
+  --slide-certificate-height: 34rem;
+
+  &__slider {
+    width: 100%;
+  }
+
+  .certificate-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--slide-certificate-width);
+    margin: 0;
+
+    &__title {
+      display: block;
+      padding-top: 1.5rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--gray-light-color);
+    }
+
+    img {
+      width: 100%;
+      height: 25rem;
+      object-fit: contain;
+    }
+  }
+
+  @include media_breakpoint(small-desktop only-desktop) {
+    .certificate-slide {
+      //width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  @include media_breakpoint(tablet) {
+    .certificate-slide {
+      width: 100%;
+
+      img {
+        height: auto;
+      }
+    }
+  }
+}

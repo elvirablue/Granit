@@ -14,6 +14,8 @@ const webpackConfig = require("../webpack.config.js"),
     argv = yargs.argv,
     production = !!argv.production;
 
+webpackConfig.entry.pages = "./src/js/pages.js";
+webpackConfig.output.filename = "[name].js";
 webpackConfig.mode = production ? "production" : "development";
 webpackConfig.devtool = production ? false : "source-map";
 

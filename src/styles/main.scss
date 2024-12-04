@@ -1,14 +1,32 @@
 // Переменные, миксины, функции
-@import "helpers/variables";
-@import "helpers/mixins";
 @import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/root-variables";
+@import "helpers/variables";
 
 // CSS-файлы библиотек
 @import "vendor/libs";
 
 // Основное
 @import "base/fonts";
+@import "base/global";
 @import "base/general";
+@import "base/typography";
+@import "base/grid";
+@import "buttons";
+@import "forms";
+@import "inputs";
+@import "section-title";
+
+@import "app/app";
+@import "sections/main";
+@import "sections/about";
+@import "sections/certificates";
+@import "sections/services";
+@import "sections/calculation";
+@import "sections/feedback";
+@import "sections/statistics";
 
 // БЭМ-блоки
 @import "../blocks/modules/modules";
+@import "../blocks/components/components";

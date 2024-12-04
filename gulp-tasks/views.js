@@ -3,6 +3,7 @@
 import { paths } from "../gulpfile.babel";
 import gulp from "gulp";
 import pug from "gulp-pug";
+import pugbem from "gulp-pugbem";
 import gulpif from "gulp-if";
 import replace from "gulp-replace";
 import browsersync from "browser-sync";
@@ -14,7 +15,8 @@ const argv = yargs.argv,
 gulp.task("views", () => {
     return gulp.src(paths.views.src)
         .pipe(pug({
-            pretty: true
+            pretty: true,
+            plugins: [pugbem]
         }))
         .pipe(gulpif(production, replace(".css", ".min.css")))
         .pipe(gulpif(production, replace(".js", ".min.js")))

@@ -1,0 +1,42 @@
+mixin svg(svgName="")
+    svg(class!=attributes.class)
+        use(href="./img/sprites/sprite.svg#" + svgName)
+
+mixin img(imgName="")
+    img(src="./img/" + imgName class!=attributes.class)
+
+mixin socials(buttonClass="")
+    button.button-icon(class=buttonClass)
+        +svg('mail').s-36
+    button.button-icon(class=buttonClass)
+        +svg('whatsapp').s-36
+    button.button-icon(class=buttonClass)
+        +svg('telegram').s-36
+
+mixin button-circle(textSvg="button-call", iconSvg="calling-thin")
+    button.button-circle
+        +svg(textSvg).__text
+        +svg(iconSvg).__icon.animate__animated.animate__heartBeat.animate__infinite.animate__slow
+
+mixin section-title(title='')
+    div.section-title
+        div.__literal.h2
+            span #{title[0].toUpperCase()}
+        div.__title
+            span.h3 #{title}
+
+mixin input(value='', label='', name='', type='text', required='false', min='', max='')
+    - var fieldRequired = required === 'true'
+    div.input(class = type === 'textarea' ? ' input--textarea' : '')
+        if type === 'textarea'
+            textarea(value=value placeholder=label name=name)
+        else
+            input(value=value placeholder=label name=name type=type required=fieldRequired min=min max=max)
+
+mixin checkbox(label='', name='', required='')
+    - var fieldRequired = required === 'true'
+    div.checkbox
+        input(type='checkbox' name=name id='checkbox-'+name required=fieldRequired)
+        label(for='checkbox-'+name)
+            span.check
+            span #{label}

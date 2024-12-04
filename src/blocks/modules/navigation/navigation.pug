@@ -1,0 +1,20 @@
+include ./../../../views/helpers/mixins
+
+-
+    navList = [
+        {title: 'Услуги', href: '/services.html'},
+        {title: 'Каталог', href: '/catalog.html'},
+        {title: 'Спец.техника', href: '/technique.html'},
+        {title: 'Наши работы', href: '/technique.html'},
+        {title: 'О компании', href: '/about.html'},
+        {title: 'Контакты', href: '/contacts.html'},
+    ]
+
+nav#Menu.navigation
+    a.__logo(href='/')
+        +img('logo-dark.svg')
+    each item in navList
+        a.__link(href=item.href)
+            span #{item.title}
+    div.__social
+        +socials('button-icon--accent')
