@@ -1,0 +1,115 @@
+extends ../layouts/default
+
+block variables
+	- pageTitle = 'Каталог'
+	- title = "ГРАНИТ: Аренда спецтехники | " + pageTitle;
+	-
+		breadcrumbs = [
+			{title: 'Главная', link: '/'},
+			{title: pageTitle, link: ''}
+		]
+	- isSectionMainAddText = false
+	-
+		catalogItems = [
+			{
+				title: 'Шпунт Ларсена VL606a',
+				image: 'catalog/1.png',
+				info: [
+					{name: 'Масса шпунта:', text: '85.4 кг/м.п'},
+					{name: 'Момент инерции:', text: '47402 cм4/м'},
+					{name: 'Упругий момент:', text: '2204.8 cм3/м'},
+				]
+			},
+			{
+				title: 'Шпунт Ларсена VL606a',
+				image: 'catalog/1.png',
+				info: [
+					{name: 'Масса шпунта:', text: '85.4 кг/м.п'},
+					{name: 'Момент инерции:', text: '47402 cм4/м'},
+					{name: 'Упругий момент:', text: '2204.8 cм3/м'},
+				]
+			},
+			{
+				title: 'Шпунт Ларсена VL606a',
+				image: 'catalog/1.png',
+				info: [
+					{name: 'Масса шпунта:', text: '85.4 кг/м.п'},
+					{name: 'Момент инерции:', text: '47402 cм4/м'},
+					{name: 'Упругий момент:', text: '2204.8 cм3/м'},
+				]
+			},
+			{
+				title: 'Шпунт Ларсена VL606a',
+				image: 'catalog/1.png',
+				info: [
+					{name: 'Масса шпунта:', text: '85.4 кг/м.п'},
+					{name: 'Момент инерции:', text: '47402 cм4/м'},
+					{name: 'Упругий момент:', text: '2204.8 cм3/м'},
+				]
+			},
+			{
+				title: 'Шпунт Ларсена VL606a',
+				image: 'catalog/1.png',
+				info: [
+					{name: 'Масса шпунта:', text: '85.4 кг/м.п'},
+					{name: 'Момент инерции:', text: '47402 cм4/м'},
+					{name: 'Упругий момент:', text: '2204.8 cм3/м'},
+				]
+			},
+			{
+				title: 'Шпунт Ларсена VL606a',
+				image: 'catalog/1.png',
+				info: [
+					{name: 'Масса шпунта:', text: '85.4 кг/м.п'},
+					{name: 'Момент инерции:', text: '47402 cм4/м'},
+					{name: 'Упругий момент:', text: '2204.8 cм3/м'},
+				]
+			},
+			{
+				title: 'Шпунт Ларсена VL606a',
+				image: 'catalog/1.png',
+				info: [
+					{name: 'Масса шпунта:', text: '85.4 кг/м.п'},
+					{name: 'Момент инерции:', text: '47402 cм4/м'},
+					{name: 'Упругий момент:', text: '2204.8 cм3/м'},
+				]
+			},
+		]
+block content
+
+	include ../../blocks/modules/section-main/section-main
+
+	//div.empty-separator
+	section.catalog
+		div.container
+			+section-title('Каталог шпунта', breadcrumbs)
+			include ../../blocks/components/filters/catalog-filters
+
+			div.catalog__list
+				div.row
+					each item in catalogItems
+						div.col-3.col-sm-6.col-xs-12
+							- catalogItem = item
+							include ../../blocks/components/catalog-item/catalog-item
+			div.catalog__action
+				button.button.-small.-transparent(type='button')
+					span ПОКАЗАТЬ ЕЩЕ
+					+svg('arrow-bottom').s-24
+
+	div.empty-separator
+	- calculationTitle= 'РАССЧИТАЕМ СТОИМОСТЬ шпунта'
+	-
+		formFields = [
+			{value: '', label: 'Марка', name: 'mark', type: 'text', required: 'true'},
+			{value: '', label: 'кол-во', name: 'amount', type: 'number', required: 'true', min: '1', max: '100'},
+			{value: '', label: 'имя', name: 'name', type: 'text', required: 'true'},
+			{value: '', label: 'Номер телефона', name: 'phone', type: 'tel', required: 'true'},
+			{value: '', label: 'комментарии', name: 'phone', type: 'textarea', required: 'false'},
+		]
+	include ../../blocks/modules/sections-form/calculation-section
+
+	div.empty-separator
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/catalog.js")

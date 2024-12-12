@@ -1,37 +1,27 @@
-import Viewer from "viewerjs";
-import 'viewerjs/dist/viewer.css'
-
-const initCertificatesViewer = () => {
-    const certificatesViewer = document.querySelector('#certificatesViewer');
-
-    if (certificatesViewer) {
-        new Viewer(certificatesViewer, {
-            title: false,
-            toolbar: {
-                prev: 1,
-                next: 1,
-            },
-            navbar: true
-        });
-    }
-}
+import PerfectScrollbar from "perfect-scrollbar";
+let accordion = document.body.querySelector('.index-accordion')
+let accordionItems = accordion.querySelectorAll('.index-accordion__item')
+let accordionActivators = accordion.querySelectorAll('.index-accordion__activator')
+let textContents = accordion.querySelectorAll('.text-contents')
 const initServicesAccordion = () => {
-    let accordion = document.body.querySelector('.accordion')
-    let accordionItems = accordion.querySelectorAll('.accordion__item')
-    let accordionActivators = accordion.querySelectorAll('.accordion__activator')
-    accordionItems[0].classList.add('accordion__item--active')
+    accordionItems[0].classList.add('index-accordion__item--active')
     accordion.style.setProperty('--count-item', accordionItems.length.toString())
 
     accordionActivators.forEach((button, index) =>
         button.addEventListener('click', () => openContent(index))
     )
 
+    textContents.forEach((item, index) => {
+        new PerfectScrollbar(item, {
+            minScrollbarLength: 40,
+            wheelSpeed: 0.1
+        });
+    });
+
     function openContent(index) {
-        console.debug(index)
-        accordion.querySelector('.accordion__item.accordion__item--active')?.classList.remove('accordion__item--active')
-        accordionItems[index].classList.add('accordion__item--active')
+        accordion.querySelector('.index-accordion__item.index-accordion__item--active')?.classList.remove('index-accordion__item--active')
+        accordionItems[index].classList.add('index-accordion__item--active')
     }
 }
 
 initServicesAccordion()
-initCertificatesViewer()

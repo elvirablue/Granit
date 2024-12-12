@@ -1,11 +1,11 @@
+// CSS-файлы библиотек
+@import "vendor/libs";
+
 // Переменные, миксины, функции
 @import "helpers/functions";
 @import "helpers/mixins";
 @import "helpers/root-variables";
 @import "helpers/variables";
-
-// CSS-файлы библиотек
-@import "vendor/libs";
 
 // Основное
 @import "base/fonts";
@@ -13,12 +13,21 @@
 @import "base/general";
 @import "base/typography";
 @import "base/grid";
+@import "app";
+@import "breadcrumbs";
 @import "buttons";
-@import "forms";
 @import "inputs";
 @import "section-title";
+@import "tabs";
 
-@import "app/app";
+// Переопределение стилей библиотек
+@import "overriding/glide";
+@import "overriding/viewer";
+@import "overriding/custom-select";
+@import "overriding/perfect-scroll";
+@import "overriding/accordion";
+
+// Стили секций
 @import "sections/main";
 @import "sections/about";
 @import "sections/certificates";
@@ -26,6 +35,11 @@
 @import "sections/calculation";
 @import "sections/feedback";
 @import "sections/statistics";
+@import "sections/works";
+@import "sections/catalog";
+@import "sections/contacts";
+
+
 
 // БЭМ-блоки
 @import "../blocks/modules/modules";

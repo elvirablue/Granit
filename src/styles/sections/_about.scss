@@ -1,4 +1,7 @@
 .about {
+  display: block;
+  width: 100%;
+
   .h2 {
     text-transform: none;
   }
@@ -13,6 +16,13 @@
     display: block;
     height: 100%;
     min-height: rem(456);
+  }
+
+  @include media_breakpoint(only-desktop) {
+    &__benefits {
+      display: block;
+      padding: 0 rem(50);
+    }
   }
 
   @include media_breakpoint(mobile) {

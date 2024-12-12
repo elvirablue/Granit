@@ -1,0 +1,21 @@
+-
+    formFields = [
+        {value: '', label: 'поиск', name: 'search', type: 'search', required: 'false'},
+        {value: '', label: 'производитель', name: 'manufacturer', type: 'select', required: 'false', options: ['ДМКД', 'ЕРАЗ', 'Arcelor']},
+        {value: '', label: 'ширина шпунта', name: 'size', type: 'select', required: 'false', options: ['40', '42.5', '50', '60', '70', '80', '90']}
+    ]
+form.filters
+    div.row
+        each item in formFields
+            div.col-3.col-sm-6.col-xs-12
+                div.filters__item
+                    if item.type === 'select'
+                        - selectField = item
+                        include ../custom-select/custom-select
+                    else
+                        +input(item.value, item.label, item.name, item.type, item.required)
+        div.col-3.col-sm-6.col-xs-12
+            div.filters__item
+                button.button.-radius-right.-accent.full-width(type='submit')
+                    span поиск
+                    +svg('magnifier').s-24

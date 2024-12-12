@@ -1,0 +1,44 @@
+.links-list {
+  display: block;
+  column-count: 1;
+  column-gap: rem(24);
+
+  &__item {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--gray-light-color-opacity);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: rem(8) 0;
+    font-size: rem(20);
+    text-transform: uppercase;
+    color: var(--text-color);
+    transition: color 0.1s ease-in-out;
+
+    svg {
+      margin-left: auto;
+      margin-top: rem(6);
+      color: var(--gray-light-color-opacity);
+    }
+
+    &:hover {
+      color: var(--gray-light-color);
+
+      svg {
+        color: currentColor;
+      }
+    }
+
+    @include media_breakpoint(tablet) {
+      font-size: rem(18);
+    }
+
+    @include media_breakpoint(mobile) {
+      font-size: rem(16);
+    }
+  }
+}

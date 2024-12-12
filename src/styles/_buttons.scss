@@ -26,8 +26,16 @@
     background-color: var(--accent-color);
   }
 
+  &--transparent {
+    background-color: transparent;
+  }
+
   &--radius {
     border-radius: rem(48) 0 rem(48) rem(48);
+  }
+
+  &--small {
+    height: $action-small-height;
   }
 
   &--radius-left {

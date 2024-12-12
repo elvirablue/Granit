@@ -1,0 +1,14 @@
+.filters {
+  display: block;
+  width: 100%;
+
+  [class*=col]:first-child {
+    .input, .custom-select {
+      border-top-left-radius: rem(30);
+    }
+  }
+
+  .button {
+    height: $folder-height;
+  }
+}

@@ -1,0 +1,28 @@
+-
+    worksList = [
+        {img: 'works/1.png'},
+        {img: 'works/1.png'},
+        {img: 'works/1.png'},
+    ]
+
+div#worksCarousel.works__slider
+    div.glide
+        div.glide__track(data-glide-el="track")
+            ul#worksViewer.glide__slides
+                each item, index in worksList
+                    li.glide__slide
+                        div.work-slide
+                            figure.image-radius.image-radius--bottom-right
+                                +img(item.img)
+
+        div.glide__arrows(data-glide-el="controls")
+            div.glide__arrow.glide__arrow--left(data-glide-dir="<")
+                button.slider__button--prev
+                    +svg('slider-arrow').s-48
+            div.glide__arrow.glide__arrow--right(data-glide-dir=">")
+                button.slider__button--next
+                    +svg('slider-arrow').s-48
+
+        div.glide__bullets.desktop-none(data-glide-el="controls[nav]")
+            each item, index in worksList
+                button.glide__bullet(data-glide-dir="=" + index)

@@ -1,0 +1,116 @@
+extends ../layouts/default
+
+block variables
+	- pageTitle = "О КОМПАНИИ"
+	- title = "ГРАНИТ: Аренда спецтехники | " + pageTitle;
+	-
+		breadcrumbs = [
+			{title: 'Главная', link: '/'},
+			{title: pageTitle, link: ''}
+		]
+	-
+		benefitsList = [
+			{title: 'Штат сотрудников', text: '14 опытных специалистов с опытом работы не менее 3 лет в данной сфере', svg: 'benefit-1'},
+			{title: 'Парк оборудования', text: '7 единиц строительной техники для выполнения всех видов работ', svg: 'benefit-2'},
+			{title: 'Сертификация', text: 'предоставляем необходимые сертификаты на выполнение работ', svg: 'benefit-3'},
+		]
+
+block content
+	section
+		div.container
+			+section-title("О КОМПАНИИ “СК ГРАНИТ”", breadcrumbs)
+
+	section
+		div.container
+			div.row
+				div.col-6.col-sm-12
+					div.h2 Строительная Компания ГРАНит
+					div.about__text
+						div.text-contents
+							p основана в 2019 году.
+							p Мы выполняем шпунтовые и свайные работы «ПОД КЛЮЧ» нулевого цикла строительства.
+							p Работаем по всей России. За счёт налаженной логистики гарантируем оперативный выезд на объект любой удалённости.
+
+				div.col-6.col-sm-12
+					div.about__decor
+						div.image-radius.-top-right
+							+img('about-2.jpg')
+
+	div.empty-separator
+	section.about
+		div.container
+			div.about__benefits
+				div.row.-center
+					each item in benefitsList
+						div.col-4.col-sm-6.col-xs-12
+							- benefit = item
+							include ../../blocks/components/benefit/benefit
+
+	div.empty-separator
+	section
+		div.container
+			div.row
+				div.col-6.col-sm-12.col-sm-order-2
+					div.about__decor
+						div.image-radius.-bottom-left
+							+img('about-3.jpg')
+				div.col-6.col-sm-12.col-sm-order-1
+					div.h2 Выполняем шпунтовые и свайные работы по всей России
+					div.about__text
+						div.text-contents
+							p Основное направление деятельности нашей компании – работы по погружению и извлечению Шпунта Ларсена с использованием техник статического вдавливания или виброзабивки.
+							p Услуги широко востребованы для строительства и укрепления котлованов, защиты стройплощадок от грунтовых вод, укрепления оползневых грунтов, а также для усиления береговых линий водоёмов и строительства различных сооружений (мостов, причалов, плотин, дамб и шлюзов, канализационных коллекторов)
+
+	div.empty-separator
+	section
+		div.container
+			div.row
+				div.col-6.col-sm-12
+					div.h2 Выполняем шпунтовые и свайные работы по всей России
+				div.col-6.col-sm-12
+				div.col-6.col-sm-12
+					div.about__text
+						div.text-contents
+							ul
+								li Разрабатываем проект, проводим инженерно-геодезические   изыскания.
+								li Подбираем и поставляем шпунт (с возможностью обратного выкупа).
+								li Производим сварку листов шпунта Ларсена в проектную длину.
+								li Доставляем стройматериалы и всю необходимую технику на объект.
+
+				div.col-6.col-sm-12
+					div.about__text
+						div.text-contents
+							ul
+								li Выполняем подготовительные работы, экскавацию и утилизацию грунта.
+								li Производим погружение или извлечение шпунта оптимальным способом.
+								li Контролируем все виды работ на каждом этапе (без дополнительной оплаты).
+
+	div.empty-separator
+	section
+		div.container
+			div.row
+				div.col-6.col-sm-12
+					div.h2 К каждому проекту подходим индивидуально
+					div.about__text
+						div.text-contents
+							p Стараемся сократить расходы заказчика благодаря использованию новейших видов шпунта, подбору оптимального материала с помощью точного расчёта нагрузки и необходимых свойств, а также уменьшения сметы за счёт использования собственных технических средств.
+							p Будем рады обсудить особенности вашей задачи и варианты уменьшения стоимости работ по телефону или при личной встрече в одном из офисов ООО СК ГРАНИТ (в Москве или  в Санкт-Петербурге).
+
+				div.col-6.col-sm-12
+					div.about__decor
+						div.image-radius.-top-right
+							+img('about-4.jpg')
+
+	div.empty-separator
+	- calculationTitle= 'РАССЧИТАЕМ СТОИМОСТЬ РАБОТ'
+	-
+		formFields = [
+			{value: '', label: 'имя', name: 'name', type: 'text', required: 'true'},
+			{value: '', label: 'Номер телефона', name: 'phone', type: 'tel', required: 'true'},
+			{value: '', label: 'комментарии', name: 'phone', type: 'textarea', required: 'false'},
+		]
+	include ../../blocks/modules/sections-form/calculation-section
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/pages.js")

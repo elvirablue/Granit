@@ -8,7 +8,7 @@
   right: 0;
   display: block;
   height: $desktop-header-height;
-  font-size: 1rem;
+  font-size: rem(16);
   border-bottom: 2px solid var(--accent-color);
   background-color: rgba(#FFFFFF, 0.7);
   backdrop-filter: blur(15px);
@@ -22,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: rem(32);
     width: 100%;
   }
 
@@ -36,7 +36,7 @@
   &__call {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: rem(8);
     line-height: 1;
     white-space: nowrap;
 

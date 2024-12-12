@@ -1,4 +1,4 @@
-.accordion {
+.index-accordion {
   --count-item: 1;
   --item-height-desktop: #{rem(544)};
   --item-height-mobile: #{rem(352)};
@@ -31,7 +31,7 @@
       cursor: default;
       pointer-events: none;
 
-      .accordion__activator {
+      .index-accordion__activator {
         color: var(--accent-color);
 
         svg {
@@ -40,11 +40,11 @@
         }
       }
 
-      .accordion__content {
+      .index-accordion__content {
         width: 100%;
       }
 
-      .accordion__content-inner {
+      .index-accordion__content-inner {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -127,7 +127,7 @@
 
   @for $i from 1 through 10 {
     &__item:nth-child(#{$i}) {
-      .accordion__content-inner {
+      .index-accordion__content-inner {
         @include media_breakpoint(small-desktop only-desktop) {
           left: calc($i * var(--activator-size));
           right: calc((var(--count-item) - $i) * var(--activator-size));
@@ -154,11 +154,11 @@
       &--active {
         height: var(--item-height-mobile);
 
-        .accordion__content {
+        .index-accordion__content {
           height: calc(var(--item-height-mobile) - var(--activator-size));
         }
 
-        .accordion__activator {
+        .index-accordion__activator {
           svg {
             transform: rotate(-90deg);
           }
@@ -208,7 +208,7 @@
     &__item--active {
       height: 80vw;
 
-      .accordion__content {
+      .index-accordion__content {
         height: calc(80vw - var(--activator-size));
       }
     }

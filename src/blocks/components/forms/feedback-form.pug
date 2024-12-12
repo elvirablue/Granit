@@ -1,16 +1,8 @@
-include ./../../../views/helpers/mixins
--
-    fields = [
-        {value: '', label: 'имя', name: 'name', type: 'text', required: 'true'},
-        {value: '', label: 'Номер телефона', name: 'phone', type: 'tel', required: 'true'},
-        {value: '', label: 'комментарии', name: 'phone', type: 'textarea', required: 'false'},
-    ]
-
 form.form(role='form' method='GET')
     div.__title
         div.h3 Заполните форму
     div.__fields
-        each item in fields
+        each item in formFields
             div.form__fields-item
                 +input(item.value, item.label, item.name, item.type, item.required)
                 div.error Example error text

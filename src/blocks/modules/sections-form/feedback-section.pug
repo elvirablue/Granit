@@ -1,0 +1,21 @@
+-
+    formFields = [
+        {value: '', label: 'имя', name: 'name', type: 'text', required: 'true'},
+        {value: '', label: 'Номер телефона', name: 'phone', type: 'tel', required: 'true'},
+        {value: '', label: 'комментарии', name: 'phone', type: 'textarea', required: 'false'},
+    ]
+
+section.feedback
+    div.container
+        +section-title('Вопросы')
+        div.row
+            div.col-7.col-md-6.col-sm-12
+                div.feedback__text-wrap
+                    div.feedback__text
+                        div.h2 ОСТАЛИСЬ ВОПРОСЫ?
+                        div Или нужна консультация?
+                        div Заполните форму или позвоните нам
+                        +phone-link()
+            div.col-5.col-md-6.col-sm-12
+                div.feedback__form
+                    include ./../../components/forms/feedback-form

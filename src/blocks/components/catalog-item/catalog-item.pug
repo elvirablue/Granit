@@ -1,0 +1,17 @@
+div.catalog-item
+    div.__image
+        +img(catalogItem.image)
+
+    div.__description
+        div.__title #{catalogItem.title}
+        div.__table
+            div.info-table.-small
+                each info in catalogItem.info
+                    div.__tr
+                        span.__td #{info.name}
+                        span.__td #{info.text}
+
+        div.__action
+            button.button.-small.-radius-left.-accent.full-width(type='button')
+                span узнать цену
+                +svg('arrow-right').s-24

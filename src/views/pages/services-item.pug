@@ -1,0 +1,80 @@
+extends ../layouts/default
+
+block variables
+	- pageTitle = "Ограждение котлована из труб"
+	- title = "ГРАНИТ: Аренда спецтехники | Услуги | " + pageTitle;
+
+	-
+		breadcrumbs = [
+			{title: 'Главная', link: '/'},
+			{title: 'Услуги', link: 'services.html'},
+			{title: pageTitle, link: ''}
+		]
+	-
+		linksList = [
+			{title: 'Проектирование', link: 'services-item.html'},
+			{title: 'Подготовка ППР (Проекта производства работ)', link: 'services-item.html'},
+			{title: 'Сварка шпунта Ларсена в Проектную длину', link: 'services-item.html'},
+			{title: 'Вибропогружение шпунта Ларсена', link: 'services-item.html'},
+			{title: 'Погружение шпунта Ларсена методом Статического вдавливания ', link: 'services-item.html'},
+			{title: 'Погружение шпунта Ларсена (Вибропогружателем на базе экскаватора)', link: 'services-item.html'},
+			{title: 'Предварительное лидерное бурения для погружения шпунта Ларсена.', link: 'services-item.html'},
+			{title: 'Извлечение шпунта Ларсена Статической уставкой ', link: 'services-item.html'},
+			{title: 'Извлечение шпунта Ларсена (Вибропогружателем на базе экскаватора)', link: 'services-item.html'},
+			{title: 'Ограждение котлована из труб', link: 'services-item.html'},
+			{title: 'Монтаж/демонтаж обвязачных и распорных поясов', link: 'services-item.html'},
+			{title: 'Аренда оборудования для погружения шпунта Ларсена', link: 'services-item.html'}
+		]
+block content
+	section.services
+		div.container
+			+section-title(pageTitle, breadcrumbs)
+			div.row
+				div.col-6.col-sm-12
+					div.services__description
+						h1.h1 ШПУНТОВОЕ ОГРАЖДЕНИЕ ИЗ&nbsp;ТРУБ
+						div.text-contents
+							p Одной из востребованных услуг, оказываемых нашей компанией, является устройство шпунтового ограждения из труб. Цена работ и материала невысокая.
+							p Такая конструкция возводится как на начальном этапе строительных работ в качестве ограждения котлованов, так и, например, во время формирования временных траншей для производства монтажных работ.
+				div.col-6.col-sm-12
+					div.services__image
+						div.image-radius.image-radius--top-right
+							+img('services/3.jpg')
+			div.empty-separator
+			div.row
+				div.col-6.col-sm-12.col-sm-order-2
+					div.services__image
+						div.image-radius.image-radius--bottom-left
+							+img('services/3.jpg')
+				div.col-6.col-sm-12.col-sm-order-1
+					div.services__description
+						h1.h1 ДОСТОИНСТВА ШПУНТОВОГО ОГРАЖДЕНИЯ
+						div.text-contents
+							ul
+								li Высокая устойчивость конструкции, что позволяет использовать её в качестве несъёмной опалубки;
+								li Повышенная степень устойчивости благодаря не только большой массе металлических изделий, но и возможности установки в трубах дополнительных швеллеров и балок;
+								li Возможность производить демонтаж труб после проведения работ нулевого цикла и в дальнейшем применить их либо в строительных работах, либо вообще продать на вторичном рынке;
+								li Доступная цена шпунтового ограждения из труб, особенно с учётом того, что всегда имеется возможность создать постоянную конструкцию, утилизировав тем самым трубы б/у
+
+						button.button.-radius-right.-accent
+							span Расчитать стоимость
+							+svg('arrow-right').s-24
+
+	div.empty-separator
+	section.services
+		div.container
+			div.services__links-list
+				include ../../blocks/modules/links-list/links-list
+
+	div.empty-separator
+	- calculationTitle= 'РАССЧИТАЕМ СТОИМОСТЬ РАБОТ'
+	-
+		formFields = [
+			{value: '', label: 'имя', name: 'name', type: 'text', required: 'true'},
+			{value: '', label: 'Номер телефона', name: 'phone', type: 'tel', required: 'true'},
+			{value: '', label: 'комментарии', name: 'phone', type: 'textarea', required: 'false'},
+		]
+	include ../../blocks/modules/sections-form/calculation-section
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/pages.js")

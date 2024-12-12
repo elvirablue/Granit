@@ -1,0 +1,35 @@
+extends ../layouts/default
+
+block variables
+	- const title = "ГРАНИТ: Аренда спецтехники | Услуги";
+	-
+		const breadcrumbs = [
+			{title: 'Главная', link: '/'},
+			{title: 'Услуги', link: ''}
+		]
+	-
+		linksList = [
+			{title: 'Проектирование', link: 'services-item.html'},
+			{title: 'Подготовка ППР (Проекта производства работ)', link: 'services-item.html'},
+			{title: 'Сварка шпунта Ларсена в Проектную длину', link: 'services-item.html'},
+			{title: 'Вибропогружение шпунта Ларсена', link: 'services-item.html'},
+			{title: 'Погружение шпунта Ларсена методом Статического вдавливания ', link: 'services-item.html'},
+			{title: 'Погружение шпунта Ларсена (Вибропогружателем на базе экскаватора)', link: 'services-item.html'},
+			{title: 'Предварительное лидерное бурения для погружения шпунта Ларсена.', link: 'services-item.html'},
+			{title: 'Извлечение шпунта Ларсена Статической уставкой ', link: 'services-item.html'},
+			{title: 'Извлечение шпунта Ларсена (Вибропогружателем на базе экскаватора)', link: 'services-item.html'},
+			{title: 'Ограждение котлована из труб', link: 'services-item.html'},
+			{title: 'Монтаж/демонтаж обвязачных и распорных поясов', link: 'services-item.html'},
+			{title: 'Аренда оборудования для погружения шпунта Ларсена', link: 'services-item.html'}
+		]
+block content
+	section.services
+		div.container
+			+section-title('услуги', breadcrumbs)
+			div.services__links-list
+				include ../../blocks/modules/links-list/links-list
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/pages.js")

@@ -18,12 +18,25 @@ mixin button-circle(textSvg="button-call", iconSvg="calling-thin")
         +svg(textSvg).__text
         +svg(iconSvg).__icon.animate__animated.animate__heartBeat.animate__infinite.animate__slow
 
-mixin section-title(title='')
-    div.section-title
+mixin section-title(title='', breadcrumbs=[])
+    div.section-title(class=breadcrumbs.length ? 'section-title--first' : '')
         div.__literal.h2
             span #{title[0].toUpperCase()}
-        div.__title
-            span.h3 #{title}
+
+        div.__content
+            div.__breadcrumbs
+                if breadcrumbs.length
+                    div.breadcrumbs
+                        each item in breadcrumbs
+                            if item.link
+                                a.__item(href=item.link)
+                                    span #{item.title}
+                                    span.__divider
+                            else
+                                div.__item
+                                    span #{item.title}
+            div.__line
+            div.__title #{title}
 
 mixin input(value='', label='', name='', type='text', required='false', min='', max='')
     - var fieldRequired = required === 'true'
@@ -40,3 +53,8 @@ mixin checkbox(label='', name='', required='')
         label(for='checkbox-'+name)
             span.check
             span #{label}
+
+mixin phone-link(phone='+7 (999) 000 - 00 - 00')
+    a(href='tel:' + phone).phone-link
+        +svg('calling').s-24
+        span #{phone}

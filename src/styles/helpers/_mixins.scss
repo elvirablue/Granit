@@ -44,6 +44,7 @@ $gutters-size: 0.5rem;
 
 @mixin grid($nested: false, $gutters-size: $gutters-size) {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: $gutters-size 0;
   margin: 0 (0 - $gutters-size);
@@ -71,5 +72,4 @@ $gutters-size: 0.5rem;
 
 @mixin column-padding($gutters-size: $gutters-size) {
   padding: 0 $gutters-size;
-
 }

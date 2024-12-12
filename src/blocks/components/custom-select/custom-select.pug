@@ -1,0 +1,15 @@
+div.custom-select
+
+    select(id = 'select' + selectField.name[0].toUpperCase() + selectField.name.slice(1))
+        option(value disabled) Выберите:
+        each option in selectField.options
+            option(value=option) #{option}
+
+    div.custom-select-clear
+        button.button-icon(type='button')
+            +svg('close').s-16
+
+    div.custom-select-placeholder #{selectField.label}
+
+    div.custom-select-arrow.accent-color
+        +svg('select-arrow').s-20

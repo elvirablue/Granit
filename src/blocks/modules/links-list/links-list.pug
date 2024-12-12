@@ -1,0 +1,7 @@
+
+div.links-list
+    each item in linksList
+        div.__item
+            a(href=item.link).__link
+                span #{item.title}
+                +svg('accordion-arrow').s-16

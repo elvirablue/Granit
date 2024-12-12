@@ -31,12 +31,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: rem(24);
   }
 
   @include media_breakpoint(mobile) {
-    padding: 1.5rem 0;
-    font-size: 1rem;
+    padding: rem(24) 0;
+    font-size: rem(16);
 
     &__wrap {
       flex-direction: column;

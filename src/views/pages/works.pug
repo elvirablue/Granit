@@ -1,0 +1,68 @@
+extends ../layouts/default
+
+block variables
+	- pageTitle = "Наши работы"
+	- title = "ГРАНИТ: Аренда спецтехники | " + pageTitle;
+	-
+		breadcrumbs = [
+					{title: 'Главная', link: '/'},
+					{title: pageTitle, link: ''}
+				]
+	-
+		linksListTab1 = [
+			{title: 'строительство 2-х шпунтовых котлованов', link: 'works-item.html'},
+			{title: 'ограждение котлована из труб', link: 'works-item.html'},
+			{title: 'Устройство обвязочного пояса  ', link: 'works-item.html'},
+			{title: 'проектирование', link: 'works-item.html'},
+			{title: 'сварка шпунта в проектную длину', link: 'works-item.html'},
+			{title: 'статическое вдавливание', link: 'works-item.html'},
+
+		]
+	-
+		linksListTab2 = [
+			{title: 'Устройство обвязочного пояса  ', link: 'works-item.html'},
+			{title: 'проектирование', link: 'works-item.html'},
+			{title: 'сварка шпунта в проектную длину', link: 'works-item.html'},
+			{title: 'статическое вдавливание', link: 'works-item.html'},
+
+		]
+block content
+	section
+		div.container
+			+section-title("Объекты сданные нами", breadcrumbs)
+
+	section.works
+		div.container
+			div.row
+				div.col-6.col-sm-12
+					div.works__tabs
+						div.tabs
+							div#tabContent1.__content
+								- linksList = linksListTab1
+								include ../../blocks/modules/links-list/links-list
+							div#tabContent2.__content
+								- linksList = linksListTab2
+								include ../../blocks/modules/links-list/links-list
+
+							div.__nav
+								a.__link(href="#tabContent1")
+									span извлечение
+									+svg("upload").s-16
+								a.__link(href="#tabContent2")
+									span погружение
+									+svg("upload").s-16
+				div.col-6.col-sm-12
+					include ../../blocks/modules/sliders/works/works-slider
+	div.empty-separator
+	- calculationTitle= 'РАССЧИТАЕМ СТОИМОСТЬ РАБОТ'
+	-
+		formFields = [
+			{value: '', label: 'имя', name: 'name', type: 'text', required: 'true'},
+			{value: '', label: 'Номер телефона', name: 'phone', type: 'tel', required: 'true'},
+			{value: '', label: 'комментарии', name: 'phone', type: 'textarea', required: 'false'},
+		]
+	include ../../blocks/modules/sections-form/calculation-section
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/works.js")

@@ -1,0 +1,16 @@
+section.calculation
+    div.container
+        +section-title('расчет стоимости')
+        div.row
+            div.col-7.col-md-6.col-sm-12
+                div.calculation__text
+                    div.h2 #{calculationTitle}
+                    div.pt-8 Оставьте заявку и мы свяжемся с вами в ближайшее время
+                    div.pt-16.text-semi-bold.gray-light-color Пришлите ваш проект и получите расчет
+                    div.pt-8 Расчитаем за 2 часа
+
+                    div.calculation__decor
+                        +img('calculation.png')
+            div.col-5.col-md-6.col-sm-12
+                div.calculation__form
+                    include ./../../components/forms/feedback-form

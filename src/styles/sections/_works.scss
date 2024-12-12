@@ -1,0 +1,17 @@
+.works {
+  &__slider {
+    width: 100%;
+    height: rem(460);
+    max-width: rem(508);
+    margin: 0 auto;
+  }
+
+  @include media_breakpoint(mobile) {
+    &__slider {
+      height: 70vw;
+      max-height: rem(360);
+      max-width: 100%;
+      margin-bottom: rem(80);
+    }
+  }
+}

@@ -1,0 +1,96 @@
+extends ../layouts/default
+
+block head
+	script(src="https://api-maps.yandex.ru/2.1/?load=Geolink&amp;lang=ru_RU&amp;apikey=2bc32578-1c71-4e7c-9d41-16e08efed24a" type="text/javascript")
+	script(src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript")
+
+
+block variables
+	- pageTitle = "Контакты"
+	- title = "ГРАНИТ: Аренда спецтехники | " + pageTitle;
+	-
+		breadcrumbs = [
+			{title: 'Главная', link: '/'},
+			{title: pageTitle, link: ''}
+		]
+
+block content
+	section
+		div.container
+			+section-title(pageTitle, breadcrumbs)
+
+	section.contacts
+		div.container
+			div.row
+				div.col-6.col-sm-12
+					div.contacts__links.gap-36
+						div.contact
+							+svg("location").s-48.accent-color
+							div.contact__text.gray-light-color
+								p.ymaps-geolink г.Москва ул.Ленинский проспект д.13
+								p.ymaps-geolink г.Санкт-петербург ул.Ленинский проспект д.13
+						div.contact
+							+svg("calling-thin").s-48.accent-color
+							div.contact__item
+								span.gray-light-color +7 (999) 000 - 00 - 00
+								span (Отдел продаж)
+						div.contact
+							+svg("calling-thin").s-48.accent-color
+							div.contact__item
+								span.gray-light-color +7 (999) 000 - 00 - 00
+								span (Отдел закупок)
+						div.contact
+							+svg("calling-thin").s-48.accent-color
+							div.contact__item
+								span.gray-light-color +7 (999) 000 - 00 - 00
+								span (Отдел маркетинга)
+						div.contact
+							+svg("message").s-48.accent-color
+							div.contact__item
+								span.gray-light-color INFO@CK-GRANIT.RU
+
+
+				div.col-6.col-sm-12
+					div.contacts__map#map
+						//script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1966752adf3bacfbe23aaf4f1152d8eeab30bee7db6c95145b1e0fa2c4a89f6f&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true")
+
+			div.contacts__requisite
+				div.row
+					div.col-6.col-sm-12
+						div.contact
+							+svg("alert").s-48.accent-color
+							div.contact__text
+								p
+									span ИНН:
+									span.gray-light-color 5257207221
+								p
+									span КПП:
+									span.gray-light-color 525701001
+								p
+									span ОГРН:
+									span.gray-light-color 1225200008670
+								p
+									span Расчетный счет:
+									span.gray-light-color 40702810490500001889
+								p
+									span Банк:
+									span.gray-light-color ПАО "БАНК "САНКТ-ПЕТЕРБУРГ"
+								p
+									span БИК:
+									span.gray-light-color 044030790
+								p
+									span Корр. счет:
+									span.gray-light-color 30101810900000000790
+					div.col-6.col-sm-12
+						div.contact
+							div.contact__text
+								p Генеральный Директор:
+								p.gray-light-color Егиазарян Гаррик Михайлович
+								p Руководитель отдела логистики:
+								p.gray-light-color Алексей  +79312106275
+
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/contacts.js")

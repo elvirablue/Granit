@@ -1,8 +1,8 @@
-import "animate.css";
 import "normalize.css";
+import "animate.css";
 
 import "./import/modules";
-import "./import/index-page";
 import "./import/components";
+import "./import/index-page";
 
 

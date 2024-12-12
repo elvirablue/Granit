@@ -1,0 +1,39 @@
+.certificate-slide {
+  $slide-certificate-width: rem(286);
+  $slide-certificate-height: rem(544);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $slide-certificate-width;
+  margin: 0;
+  font-weight: 300;
+
+  &__title {
+    display: block;
+    padding-top: rem(24);
+    font-size: rem(18);
+    font-weight: 400;
+    color: var(--gray-light-color);
+  }
+
+  img {
+    width: 100%;
+    height: rem(400);
+    object-fit: contain;
+  }
+
+
+  @include media_breakpoint(small-desktop only-desktop) {
+    margin: 0 auto;
+  }
+
+
+  @include media_breakpoint(tablet) {
+    width: 100%;
+
+    img {
+      height: auto;
+    }
+  }
+}

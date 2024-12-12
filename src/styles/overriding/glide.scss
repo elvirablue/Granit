@@ -10,8 +10,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2.625rem;
-    gap: 1rem;
+    height: rem(42);
+    gap: rem(16);
   }
 
   .glide__arrow {
@@ -34,15 +34,15 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 2.625rem;
-    margin-top: 4rem;
-    gap: 0.5rem;
+    height: rem(42);
+    margin-top: rem(64);
+    gap: rem(8);
 
     .glide__bullet {
       flex-shrink: 0;
       display: inline-flex;
-      width: 0.625rem;
-      height: 0.625rem;
+      width: rem(10);
+      height: rem(10);
       border-radius: 50%;
       background-color: var(--text-color);
       transition: background-color 0.2s ease-in-out;
@@ -59,7 +59,7 @@
     }
 
     .glide__bullets {
-      margin-top: 1.5rem;
+      margin-top: rem(16);
     }
   }
 }
