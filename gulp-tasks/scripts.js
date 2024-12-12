@@ -43,6 +43,9 @@ gulp.task("scripts", () => {
 
 gulp.task("jsons", () => {
     return gulp.src(paths.jsons.src)
-        .pipe(gulp.dest(paths.views.dist))
+        .pipe(gulp.dest(paths.jsons.dist))
+        .pipe(debug({
+            "title": "JSON files"
+        }))
         .pipe(browsersync.stream());
 });

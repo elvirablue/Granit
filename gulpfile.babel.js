@@ -33,7 +33,7 @@ const requireDir = require("require-dir"),
         },
         jsons: {
             src: "./src/js/import/*.json",
-            dist: "./docs/js/",
+            dist: "./docs/",
             watch: [
                 "./src/js/import/*.json"
             ]
