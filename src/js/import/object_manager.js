@@ -1,3 +1,5 @@
+import {dataMap} from "./data";
+
 ymaps.ready(init);
 
 function init () {
@@ -21,11 +23,8 @@ function init () {
     objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
     myMap.geoObjects.add(objectManager);
 
-    import data from "./data.json"
-
     $.ajax({
-        data
-        //url: "data.json"
+        url: "data.json"
     }).done(function(data) {
         objectManager.add(data);
     });

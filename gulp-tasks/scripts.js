@@ -19,6 +19,7 @@ webpackConfig.entry = {
     pages: "./src/js/pages.js",
     catalog: "./src/js/catalog.js",
     works: "./src/js/works.js",
+    contacts: "./src/js/contacts.js",
 };
 webpackConfig.output.filename = "[name].js";
 webpackConfig.mode = production ? "production" : "development";
