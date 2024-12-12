@@ -9,6 +9,9 @@ import rename from "gulp-rename";
 import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
+import pug from "gulp-pug";
+import pugbem from "gulp-pugbem";
+import replace from "gulp-replace";
 
 const webpackConfig = require("../webpack.config.js"),
     argv = yargs.argv,
@@ -35,5 +38,11 @@ gulp.task("scripts", () => {
         .pipe(debug({
             "title": "JS files"
         }))
+        .pipe(browsersync.stream());
+});
+
+gulp.task("jsons", () => {
+    return gulp.src(paths.jsons.src)
+        .pipe(gulp.dest(paths.views.dist))
         .pipe(browsersync.stream());
 });

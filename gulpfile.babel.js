@@ -31,6 +31,13 @@ const requireDir = require("require-dir"),
                 "./src/js/**/*.js"
             ]
         },
+        jsons: {
+            src: "./src/js/import/*.json",
+            dist: "./docs/js/",
+            watch: [
+                "./src/js/import/*.json"
+            ]
+        },
         images: {
             src: [
                 "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
@@ -68,11 +75,11 @@ export { paths };
 
 export const development = gulp.series("clean",
     gulp.parallel("favicons"),
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts"]),
+    gulp.parallel(["views", "styles", "scripts", "jsons", "images", "webp", "sprites", "fonts"]),
     gulp.parallel("inject-favicon-markups"),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "gzip"]));
+    gulp.parallel(["views", "styles", "scripts", "jsons", "images", "webp", "sprites", "fonts", "gzip"]));
 
 export default development;
