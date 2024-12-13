@@ -11,11 +11,11 @@
         ]
       },
       "properties": {
-        "balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>",
-        "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>",
-        "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>",
-        "clusterCaption": "<strong><s>Еще</s> одна</strong> метка",
-        "hintContent": "<strong>Текст  <s>подсказки</s></strong>"
+        "balloonContentHeader": "<font size=3><b>КОМПАНИЯ “СК ГРАНИТ”</b></font>",
+        "balloonContentBody": "<p>Мы выполняем шпунтовые и свайные работы «ПОД КЛЮЧ» нулевого цикла строительства.</p><p>Работаем по всей России. За счёт налаженной логистики гарантируем оперативный выезд на объект любой удалённости.</p><font size=2><b>+7 (999) 000 - 00 - 00 (Отдел продаж)</b></font>",
+        "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>СК ГРАНИТ</strong>",
+        "clusterCaption": "<font size=2><b>“СК ГРАНИТ”, Москва</b></font>",
+        "hintContent": "<strong>г.Москва, Ленинский проспект д.13</strong>"
       }
     },
     {
@@ -28,11 +28,11 @@
         ]
       },
       "properties": {
-        "balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>",
-        "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>",
-        "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>",
-        "clusterCaption": "<strong><s>Еще</s> одна</strong> метка",
-        "hintContent": "<strong>Текст  <s>подсказки</s></strong>"
+        "balloonContentHeader": "<font size=3><b>КОМПАНИЯ “СК ГРАНИТ”</b></font>",
+        "balloonContentBody": "<p>Мы выполняем шпунтовые и свайные работы «ПОД КЛЮЧ» нулевого цикла строительства.</p><p>Работаем по всей России. За счёт налаженной логистики гарантируем оперативный выезд на объект любой удалённости.</p><font size=2><b>+7 (999) 000 - 00 - 00 (Отдел продаж)</b></font>",
+        "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>СК ГРАНИТ</strong>",
+        "clusterCaption": "<font size=2><b>“СК ГРАНИТ”, Санкт-Петербург</b></font>",
+        "hintContent": "<strong>г.Москва, Ленинский проспект д.13</strong>"
       }
     }
   ]

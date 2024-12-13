@@ -100,8 +100,8 @@ function init() {
 
   // Чтобы задать опции одиночным объектам и кластерам,
   // обратимся к дочерним коллекциям ObjectManager.
-  objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-  objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+  objectManager.objects.options.set('preset', 'islands#darkOrangeDotIcon');
+  objectManager.clusters.options.set('preset', 'islands#invertedDarkOrangeClusterIcons');
   myMap.geoObjects.add(objectManager);
   $.ajax({
     url: "data.json"
